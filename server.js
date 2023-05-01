@@ -11,8 +11,8 @@ const mongoose = require("mongoose");
 // midldleware
 app.use(cors());
 app.use(express.json());
-app.get("/api/test", (req, res) => {
-  res.json("test ok");
+app.get("/", (req, res) => {
+  res.json("Backend Server is running ...");
 });
 
 // db
