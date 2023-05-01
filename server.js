@@ -39,4 +39,4 @@ app.get('/api/transactions', async (req, res) => {
 
 
 // port || listener
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 4040);
