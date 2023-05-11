@@ -37,5 +37,13 @@ app.get("/api/transactions", async (req, res) => {
     res.json(transactions);
 });
 
+app.delete("/api/deleteAll", async (req, res) => {
+    await mongoose.connect(process.env.MONGO_URL);
+
+    const deleteAll = await Transaction.deleteMany({});
+
+    res.json(deleteAll);
+});
+
 // port || listener
 app.listen(process.env.PORT || 4040);
